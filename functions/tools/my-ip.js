@@ -11,5 +11,5 @@ export async function onRequest(context) {
 
     var clientIP = request.headers['CF-Connecting-IP'];
   
-    return new Response(clientIP);
+    return new Response("Your IP: " + clientIP);
   }
