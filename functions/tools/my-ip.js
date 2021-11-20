@@ -9,7 +9,7 @@ export async function onRequest(context) {
       data, // arbitrary space for passing data between middlewares
     } = context;
 
-    var clientIP = request.headers['CF-Connecting-IP'];
+    const clientIP = request.headers.get("CF-Connecting-IP");
   
     return new Response("Your IP: " + clientIP);
   }
