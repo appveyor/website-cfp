@@ -11,5 +11,5 @@ export async function onRequest(context) {
 
     const clientIP = request.headers.get("CF-Connecting-IP");
   
-    return new Response("Your IP: " + JSON.stringify(env));
+    return new Response("Your IP: " + env.AAA_BBB);
   }
